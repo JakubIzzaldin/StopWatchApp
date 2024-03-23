@@ -1,9 +1,17 @@
 import './App.css';
+import {StopWatchTemplate} from './components/StopWatch/components/StopWatchTemplate.tsx';
 
 function App() {
   return (
     <>
-      <h1>new project</h1>
+      <StopWatchTemplate
+        hour={1}
+        minute={4}
+        second={30}
+        isActive={true}
+        durationInMinutes={65.5}
+        title={'Ahoj'}
+      />
     </>
   );
 }
