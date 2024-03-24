@@ -1,18 +1,53 @@
 import './App.css';
-import {StopWatchTemplate} from './components/StopWatch/components/StopWatchTemplate.tsx';
+import {StopWatch} from './components/StopWatch/StopWatch.tsx';
+import {Wrap, WrapItem} from '@chakra-ui/react';
 
 function App() {
   return (
-    <>
-      <StopWatchTemplate
-        hour={1}
-        minute={4}
-        second={30}
-        isActive={true}
-        durationInMinutes={65.5}
-        title={'Ahoj'}
-      />
-    </>
+    <Wrap spacing="30px">
+      <WrapItem>
+        <StopWatch areMillisecondsShown title={'Neomezene'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown durationInSec={5} title={'do 10 sec'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown title={'Neomezene'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown title={'Neomezene'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown title={'Neomezene'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown title={'Neomezene'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown title={'Neomezene'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown title={'Neomezene'} />
+      </WrapItem>
+      <WrapItem>
+        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+      </WrapItem>
+    </Wrap>
   );
 }
 
