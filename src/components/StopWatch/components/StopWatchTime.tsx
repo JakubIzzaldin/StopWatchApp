@@ -16,16 +16,28 @@ export const StopWatchTime = ({
   separator = ':',
 }: StopWatchTimeProps) => {
   const formatTime = (time: number) => time.toString().padStart(2, '0');
+  const formattedMilliseconds =
+    milliseconds !== undefined && milliseconds.toString().padStart(3, '0');
 
   return (
-    <HStack gap={3} align={'center'}>
-      <Text>{formatTime(hour)}</Text>
+    <HStack gap={1} align={'center'}>
+      <Text fontSize={'large'} minWidth="1.3rem">
+        {formatTime(hour)}
+      </Text>
       <Text fontSize={'large'}>{separator}</Text>
-      <Text fontSize={'large'}>{formatTime(minute)}</Text>
+      <Text fontSize={'large'} minWidth="1.3rem">
+        {formatTime(minute)}
+      </Text>
       <Text fontSize={'large'}>{separator}</Text>
-      <Text fontSize={'large'}>{formatTime(second)}</Text>
-      {milliseconds && <Text fontSize={'large'}>{separator}</Text>}
-      {milliseconds && <Text fontSize={'large'}>{formatTime(milliseconds)}</Text>}
+      <Text fontSize={'large'} minWidth="1.3rem">
+        {formatTime(second)}
+      </Text>
+      {formattedMilliseconds && <Text fontSize={'large'}>{separator}</Text>}
+      {formattedMilliseconds && (
+        <Text fontSize={'large'} minWidth="2.2rem">
+          {formattedMilliseconds}
+        </Text>
+      )}
     </HStack>
   );
 };
