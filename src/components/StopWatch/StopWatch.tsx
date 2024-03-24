@@ -30,11 +30,19 @@ export const StopWatch = ({
     >
       <HStack justifyContent={'flex-end'}>
         {isInDetailMode ? (
-          <Button onClick={() => setIsInDetailMode(false)} variant={'ghost'}>
+          <Button
+            onClick={() => setIsInDetailMode(false)}
+            variant={'ghost'}
+            _focus={{outline: 'none'}}
+          >
             <Icon as={SmallCloseIcon} />
           </Button>
         ) : (
-          <Button onClick={() => setIsInDetailMode(true)} variant={'ghost'}>
+          <Button
+            onClick={() => setIsInDetailMode(true)}
+            variant={'ghost'}
+            _focus={{outline: 'none'}}
+          >
             <Icon as={SearchIcon} />
           </Button>
         )}
