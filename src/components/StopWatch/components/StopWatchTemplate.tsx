@@ -33,7 +33,7 @@ export const StopWatchTemplate = ({
   const resultPercentage = progressPercentage > 100 ? 100 : progressPercentage;
 
   return (
-    <Box boxShadow={'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'} p={'10px'}>
+    <Box>
       {durationInSec && (
         <Box
           width={`${resultPercentage}%`}
