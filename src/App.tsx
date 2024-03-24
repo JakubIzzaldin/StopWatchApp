@@ -6,46 +6,46 @@ function App() {
   return (
     <Wrap spacing="30px">
       <WrapItem>
-        <StopWatch areMillisecondsShown title={'Neomezene'} />
+        <StopWatch title={'Neomezene'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown durationInSec={5} title={'do 10 sec'} />
+        <StopWatch durationInSec={5} title={'do 10 sec'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown title={'Neomezene'} />
+        <StopWatch title={'Neomezene'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+        <StopWatch durationInSec={10} title={'do 10 sec'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown title={'Neomezene'} />
+        <StopWatch title={'Neomezene'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+        <StopWatch durationInSec={10} title={'do 10 sec'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown title={'Neomezene'} />
+        <StopWatch title={'Neomezene'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+        <StopWatch durationInSec={10} title={'do 10 sec'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown title={'Neomezene'} />
+        <StopWatch title={'Neomezene'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+        <StopWatch durationInSec={10} title={'do 10 sec'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown title={'Neomezene'} />
+        <StopWatch title={'Neomezene'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+        <StopWatch durationInSec={10} title={'do 10 sec'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown title={'Neomezene'} />
+        <StopWatch title={'Neomezene'} />
       </WrapItem>
       <WrapItem>
-        <StopWatch areMillisecondsShown durationInSec={10} title={'do 10 sec'} />
+        <StopWatch durationInSec={10} title={'do 10 sec'} />
       </WrapItem>
     </Wrap>
   );
