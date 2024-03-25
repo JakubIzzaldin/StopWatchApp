@@ -2,11 +2,11 @@ import {useEffect, useRef, useState} from 'react';
 import {convertMillisecondsToTime} from '../helpers/convertMillisecondsToTime.ts';
 
 export type StopWatchStatus = 'idle' | 'running' | 'paused' | 'finished';
-export const useTimer = (initialTimeInMilliseconds = 0, durationInSec?: number) => {
+export const useTimer = (initialTimeInSec = 0, durationInSec?: number) => {
   const timeInterval = useRef(0);
   const startTimeRef = useRef(0);
   const [status, setStatus] = useState<StopWatchStatus>('idle');
-  const [passedTime, setPassedTime] = useState(initialTimeInMilliseconds);
+  const [passedTime, setPassedTime] = useState(initialTimeInSec * 1000);
   const [isTimeUp, setIsTimeUp] = useState(false);
 
   useEffect(() => {

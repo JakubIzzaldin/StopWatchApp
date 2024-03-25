@@ -19,7 +19,7 @@ function App() {
             title={name}
             onDelete={handleDelete}
             durationInSec={stopWatchDuration ? stopWatchDuration : undefined}
-            initialTimeInSec={elapsed_time}
+            initialTimeInSec={elapsed_time / 1000}
           />
         </WrapItem>
       );
@@ -49,6 +49,8 @@ function App() {
         <StopWatch
           title={'StopWatch 1'}
           onAdd={handleAddStopWatch}
+          onDelete={handleDelete}
+          progressBarColor={'blue'}
           isTitleEditable
           initialTimeInSec={0}
           backgroundColor={'#89d2ff'}
@@ -83,10 +85,13 @@ function App() {
 
       <Wrap spacing="30px" justify="center">
         <StopWatch
-          title={'Stopky do 10 sec'}
-          isTitleEditable={false}
-          initialTimeInSec={0}
-          durationInSec={10}
+          title={'Jindra'}
+          isTitleEditable
+          progressBarColor={'blue'}
+          initialTimeInSec={10}
+          durationInSec={18}
+          onDelete={handleDelete}
+          onAdd={handleAddStopWatch}
         />
         <DynamicContent {...query} data={query.data} renderContent={contentElement} />
       </Wrap>
