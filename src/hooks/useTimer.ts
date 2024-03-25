@@ -35,7 +35,7 @@ export const useTimer = (initialTimeInMilliseconds = 0, durationInSec?: number) 
   if (isTimeUp) {
     return {handleStart, handlePause, handleRestart, status, passedTime, ...times, ms: 0};
   }
-  if (times.sec === durationInSec) {
+  if (durationInSec !== undefined && times.sec >= durationInSec) {
     setIsTimeUp(true);
     handlePause();
     setStatus('finished');
