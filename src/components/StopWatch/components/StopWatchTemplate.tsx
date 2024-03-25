@@ -38,14 +38,16 @@ export const StopWatchTemplate = ({
 
   return (
     <Box>
-      {durationInSec && (
+      {durationInSec ? (
         <Box
           width={`${resultPercentage}%`}
           height={'3px'}
           bgColor={isActive ? progressBarColor : 'gray'}
         />
+      ) : (
+        <Box width={'100%'} height={'3px'} bgColor={'transparent'} />
       )}
-      <VStack alignItems={'center'} gap={10} pt={5}>
+      <VStack alignItems={'center'} gap={10} pt={3}>
         {isEditMode ? (
           <Input value={title} onChange={(event) => handleTitleChange(event.target.value)} />
         ) : (

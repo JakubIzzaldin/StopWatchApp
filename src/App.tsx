@@ -18,7 +18,7 @@ function App() {
           <StopWatch
             title={name}
             onDelete={handleDelete}
-            durationInSec={stopWatchDuration}
+            durationInSec={stopWatchDuration ? stopWatchDuration : undefined}
             initialTimeInSec={elapsed_time}
           />
         </WrapItem>
@@ -56,7 +56,7 @@ function App() {
       </VStack>
       <VStack justifyContent={'center'} gap={0}>
         <Text>Maximum duration</Text>
-        <RadioGroup defaultValue={undefined} onChange={handleDurationChange}>
+        <RadioGroup defaultValue={'0'} onChange={handleDurationChange}>
           <Stack spacing={5} direction="row">
             <Radio colorScheme="green" value={'0'}>
               No limit

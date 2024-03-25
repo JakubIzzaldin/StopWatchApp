@@ -31,7 +31,7 @@ export const StopWatch = ({
 
   const {handleStart, handlePause, handleRestart, status, min, hour, sec, ms, passedTime} =
     useTimer(initialTimeInSec, durationInSec);
-  const hadleEditTitle = (value: string) => {
+  const handleEditTitle = (value: string) => {
     setTitle(value);
   };
   return (
@@ -89,7 +89,7 @@ export const StopWatch = ({
       </HStack>
       <StopWatchTemplate
         isEditMode={isEditMode}
-        handleTitleChange={hadleEditTitle}
+        handleTitleChange={handleEditTitle}
         hour={hour}
         second={sec}
         minute={min}
