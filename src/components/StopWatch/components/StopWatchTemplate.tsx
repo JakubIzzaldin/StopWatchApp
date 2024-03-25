@@ -1,4 +1,4 @@
-import {Box, Button, HStack, Text, VStack} from '@chakra-ui/react';
+import {Box, Button, HStack, Input, Text, VStack} from '@chakra-ui/react';
 import {calculatePercentage} from '../../../helpers/calculatePrecentage.ts';
 import {CSSProperties} from 'react';
 import {StopWatchTime, StopWatchTimeProps} from './StopWatchTime.tsx';
@@ -6,7 +6,9 @@ import {StopWatchStatus} from '../../../hooks/useTimer.ts';
 
 type StopWatchTemplateProps = {
   title: string;
+  handleTitleChange: (title: string) => void;
   isActive: boolean;
+  isEditMode: boolean;
   durationInSec?: number;
   progressBarColor?: CSSProperties['color'];
   status: StopWatchStatus;
@@ -24,6 +26,8 @@ export const StopWatchTemplate = ({
   onPause,
   onRestart,
   status,
+  isEditMode,
+  handleTitleChange,
   ...props
 }: StopWatchTemplateProps) => {
   const currentTimeInSeconds = props.hour * 3600 + props.minute * 60 + props.second;
@@ -42,7 +46,12 @@ export const StopWatchTemplate = ({
         />
       )}
       <VStack alignItems={'center'} gap={10} pt={5}>
-        <Text fontSize={'large'}>{title}</Text>
+        {isEditMode ? (
+          <Input value={title} onChange={(event) => handleTitleChange(event.target.value)} />
+        ) : (
+          <Text fontSize={'large'}>{title}</Text>
+        )}
+
         <StopWatchTime {...props} />
 
         <HStack justifyContent={'space-between'}>

@@ -33,15 +33,15 @@ export const useTimer = (initialTimeInMilliseconds = 0, durationInSec?: number) 
   };
   const times = convertMillisecondsToTime(passedTime);
   if (isTimeUp) {
-    return {handleStart, handlePause, handleRestart, status, ...times, ms: 0};
+    return {handleStart, handlePause, handleRestart, status, passedTime, ...times, ms: 0};
   }
   if (times.sec === durationInSec) {
     setIsTimeUp(true);
     handlePause();
     setStatus('finished');
 
-    return {handleStart, handlePause, handleRestart, status, ...times, ms: 0};
+    return {handleStart, handlePause, handleRestart, status, passedTime, ...times, ms: 0};
   }
 
-  return {handleStart, handlePause, handleRestart, status, ...times};
+  return {handleStart, handlePause, handleRestart, status, passedTime, ...times};
 };
